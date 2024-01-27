@@ -1,0 +1,100 @@
+.sidebar {
+  width: 8rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  border-right: 0.1rem solid #ebecf2;
+  background: #f7f8fa;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  justify-content: space-between;
+
+  &--logo {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+  &--icons-main,
+  &--icons-secondary {
+    > div {
+      gap: 1.6rem;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+  }
+  &--icons-wrapper {
+    padding: 0.8rem;
+  }
+  &--theme-switcher {
+    position: relative;
+    &__checkbox {
+      opacity: 0;
+      position: absolute;
+      z-index: 4;
+    }
+
+    &__checkbox-label {
+      border-radius: 10rem;
+      background: #fff;
+      padding: 0.8rem;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 4.6rem;
+      height: 9.2rem;
+      img {
+        z-index: 3;
+        width: 3rem;
+        height: 3rem;
+        transition: all 0.2s linear;
+        &:first-child {
+          margin-top: 0.6rem;
+          width: 1.6875rem;
+          height: 1.6875rem;
+        }
+      }
+    }
+    &__checkbox-ball {
+      background-color: $primary-color;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 9.4rem;
+      position: absolute;
+      left: 50%;
+      top: 0.8rem;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      transition: all 0.2s linear;
+    }
+  }
+}
+.sidebar--theme-switcher__checkbox:checked
+  + .sidebar--theme-switcher__checkbox-label
+  .sidebar--theme-switcher__checkbox-ball {
+  transform: translateX(-50%) translateY(4.6rem);
+}
+
+.sidebar--theme-switcher__checkbox:checked
+  + .sidebar--theme-switcher__checkbox-label
+  img:first-child {
+  width: 3rem;
+  height: 3rem;
+}
+.sidebar--theme-switcher__checkbox:checked
+  + .sidebar--theme-switcher__checkbox-label
+  img:nth-child(2) {
+  width: 1.6875rem;
+  height: 1.6875rem;
+  margin-bottom: 0.6rem;
+}

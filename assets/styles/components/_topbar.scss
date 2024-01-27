@@ -1,0 +1,127 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 8rem;
+  width: calc(100% - 8rem);
+  background: #fafafa;
+  border-bottom: 0.1rem solid #e5eaef;
+  display: flex;
+  padding: 1.8rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    h5 {
+      color: #26282c;
+      font-family: $primary-font;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 2.8rem; /* 140% */
+    }
+    &:nth-child(2) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-search {
+    position: relative;
+    width: 34.9rem;
+    margin-right: 2.2rem;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 1.6rem;
+      transform: translateY(-50%);
+      height: 1.8rem;
+      width: 1.8rem;
+    }
+    input {
+      border-radius: 2.4rem;
+      border: 0.1rem solid #dadddd;
+      background: map-get($white-map, default);
+      width: 100%;
+      color: map-get($neutral-map, 400);
+      font-family: $secondary-font;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.4rem; /* 150% */
+      padding: 1.2rem;
+      padding-left: 4.2rem;
+    }
+  }
+  &-date-picker {
+    position: relative;
+    margin-right: 2rem;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 1.6rem;
+      transform: translateY(-50%);
+      height: 2rem;
+      width: 2rem;
+    }
+    input {
+      padding: 1.6rem 1.2rem;
+      background-color: transparent;
+      outline: none;
+      color: map-get($black-map, default);
+      font-family: $secondary-font;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2.2rem; /* 157.143% */
+      padding-left: 4.6rem;
+      width: 19.3rem;
+    }
+  }
+  &-notifications {
+    padding: 1.1rem;
+    border-radius: 2.7rem;
+    border: 0.0769rem solid #dadddd;
+    background-color: transparent;
+    margin-right: 2rem;
+    img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  &-profile {
+    display: flex;
+    align-items: center;
+    border-radius: 2.8rem;
+    border: 0.1rem solid #dadddd;
+    padding: 0.6rem 0.8rem;
+    cursor: pointer;
+    > img:first-child {
+      height: 3.8rem;
+      width: 3.8rem;
+      border-radius: 1.9rem;
+      margin-right: 0.8rem;
+    }
+    > img:last-child {
+      height: 2rem;
+      width: 2rem;
+      margin-left: 1.2rem;
+    }
+    h6 {
+      color: map-get($black-map, default);
+      text-align: right;
+      font-family: $secondary-font;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 0.4rem;
+    }
+    p {
+      color: #787486;
+      text-align: right;
+      font-family: $secondary-font;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

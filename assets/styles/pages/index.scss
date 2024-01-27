@@ -1,0 +1,74 @@
+.index-page {
+  padding: 2rem;
+
+  background: #fafafa;
+  min-height: 100vh;
+  &--grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  &--section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > button {
+      color: #34caa5;
+      font-family: $secondary-font;
+      font-size: 1.8rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2.6rem; /* 144.444% */
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  &--title {
+    color: map-get($black-map, default);
+    font-family: $primary-font;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.6rem; /* 144.444% */
+  }
+
+  &--chart {
+    border-radius: 1.4rem;
+    border: 0.1rem solid #edf2f7;
+    background: map-get($white-map, default);
+    height: auto;
+  }
+  &--order-table {
+    > div {
+      border-radius: 1.4rem;
+      border: 0.1rem solid #edf2f7;
+      background: map-get($white-map, default);
+      height: auto;
+      padding: 1.8rem 2rem;
+    }
+  }
+  &--platforms {
+    background: map-get($white-map, default);
+  }
+  &--chart,
+  &--platforms {
+    padding: 1.8rem 2rem;
+  }
+  &--sales-summary {
+    display: grid;
+    grid-gap: 1.6rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  &--platforms {
+    border-radius: 0.8rem;
+    background: map-get($white-map, default);
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+  }
+}
