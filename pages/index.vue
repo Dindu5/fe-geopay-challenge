@@ -45,6 +45,20 @@
 </template>
 
 <script lang="ts" setup>
+useSeoMeta({
+  title: "Analytics Dashboard - Home",
+  ogTitle: "Analytics Dashboard - Home",
+  applicationName: "Analytics Dashboard",
+  description: "Frontend geopay analytics dashboard submission",
+  ogDescription: "Frontend geopay analytics dashboard submission",
+  //   ogImage:
+  //     "https://res.cloudinary.com/dindu/image/upload/v1704161609/test/ellance_fvppgj.jpg",
+  twitterCard: "summary_large_image",
+  ogType: "website",
+  ogLocale: "en_UK",
+  //   twitterImage:
+  //     "https://res.cloudinary.com/dindu/image/upload/v1704161609/test/ellance_fvppgj.jpg",
+});
 const salesReportData = ref<Array<any>>([
   {
     title: "Total Order",
