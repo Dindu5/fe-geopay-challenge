@@ -39,6 +39,17 @@ const getBorder = computed(() => {
   );
 });
 
+const getFont = computed(() => {
+  return (
+    (Math.max(
+      document?.documentElement?.clientWidth || 0,
+      window?.innerWidth || 0
+    ) /
+      1440) *
+    12
+  );
+});
+
 const chartData = {
   labels: [
     "Jan",
@@ -159,13 +170,24 @@ const chartOptions = ref({
       border: {
         display: false,
       },
+      ticks: {
+        font: {
+          size: getFont,
+          color: "#525252",
+        },
+      },
     },
     y: {
       border: {
         dash: [5, 3],
         display: false,
       },
-
+      ticks: {
+        font: {
+          size: getFont,
+          color: "#525252",
+        },
+      },
       beginAtZero: true,
     },
   },

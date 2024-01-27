@@ -4,6 +4,13 @@
       <section class="index-page--chart">
         <div class="index-page--section-top">
           <h3 class="index-page--title">Sales Trends</h3>
+          <div>
+            <p>Short by :</p>
+            <div>
+              <h6>Weekly</h6>
+              <NuxtImg src="/images/icons/arrow-down.svg" placeholder />
+            </div>
+          </div>
         </div>
         <SalesChart />
       </section>

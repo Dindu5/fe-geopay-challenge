@@ -3,7 +3,7 @@
     <div class="sidebar--icons-main">
       <NuxtImg class="sidebar--logo" src="/images/icons/logo.svg" placeholder />
       <div>
-        <div class="sidebar--icons-wrapper">
+        <div class="sidebar--icons-wrapper active">
           <NuxtImg src="/images/icons/nav-dashboard.svg" placeholder />
         </div>
         <div class="sidebar--icons-wrapper">
@@ -52,6 +52,15 @@
 
 <script lang="ts" setup>
 const isDark = ref(false);
+
+useHead({
+  bodyAttrs: {
+    class: computed(() => {
+      if (isDark.value) return "dark-mode";
+      return "";
+    }),
+  },
+});
 </script>
 
 <style></style>
